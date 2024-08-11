@@ -2,10 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 p-4 text-white mt-auto">
-      <div className="container mx-auto text-center">
-        <p>&copy; {new Date().getFullYear()} Mi Portafolio. Todos los derechos reservados.</p>
-      </div>
+    <footer className="bg-gray-800 text-white py-4 text-center">
+      <p>© 2024 Mi Portafolio. Todos los derechos reservados.</p>
     </footer>
   );
 };

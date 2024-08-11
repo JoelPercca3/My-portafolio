@@ -1,17 +1,17 @@
-// src/pages/Skills.jsx
 import React from 'react';
-import SkillItem from '../components/Skills/SkillItem';
+import SkillsList from '../components/Skills/SkillsList'; // Verifica que la ruta sea correcta
+
+const skills = [
+  { name: 'JavaScript', description: 'Lenguaje de programación para desarrollo web.' },
+  { name: 'React', description: 'Librería para construir interfaces de usuario.' },
+  // Agrega más habilidades aquí...
+];
 
 const Skills = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Habilidades</h1>
-      <div className="flex flex-wrap">
-        {/* Ejemplo de uso del componente SkillItem */}
-        <SkillItem name="JavaScript" level="Avanzado" />
-        <SkillItem name="React" level="Intermedio" />
-        {/* Agrega más SkillItem según sea necesario */}
-      </div>
+    <div className="container mx-auto p-6">
+      <h2 className="text-3xl font-bold mb-6">Mis Habilidades</h2>
+      <SkillsList skills={skills} />
     </div>
   );
 };
