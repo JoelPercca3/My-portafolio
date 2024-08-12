@@ -7,16 +7,45 @@ const Navbar = () => {
     <nav className="bg-gray-800 p-4 text-white">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">
-          Mi Portafolio
+          My Portfolio
         </Link>
-        <div>
-          <Link to="/" className="mx-2">Inicio</Link>
-          <Link to="/about" className="mx-2">Sobre mí</Link>
-          <Link to="/projects" className="mx-2">Proyectos</Link>
-          <Link to="/skills" className="mx-2">Habilidades</Link>
-          <Link to="/contact" className="mx-2">Contacto</Link>
-          <Link to="/education" className="mx-2">Educación</Link> {/* Nuevo enlace */}
-
+        <div className="flex space-x-4">
+          <Link
+            to="/"
+            className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+          >
+            About
+          </Link>
+          <Link
+            to="/projects"
+            className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+          >
+            Projects
+          </Link>
+          <Link
+            to="/skills"
+            className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+          >
+            Skills
+          </Link>
+          <Link
+            to="/contact"
+            className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+          >
+            Contact
+          </Link>
+          <Link
+            to="/education"
+            className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+          >
+            Education
+          </Link>
         </div>
       </div>
     </nav>
