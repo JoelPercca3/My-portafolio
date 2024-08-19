@@ -1,6 +1,9 @@
+// src/pages/Home.jsx
 import React from 'react';
 import Hero from '../components/Hero';
 import ProjectsList from '../components/Projects/ProjectsList';
+import About from './About'; // Agrega esta línea para importar el componente About
+import Education from './Education'; // Agrega esta línea para importar el componente Education
 import { Link } from 'react-router-dom';
 
 const skills = [
@@ -51,15 +54,10 @@ const Home = () => {
           <ProjectsList />
         </div>
       </section>
-      <section className="py-12">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">More About My Education</h2>
-          <p className="mb-4">Discover more about my degrees and certifications.</p>
-          <Link to="/education" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
-            View Education
-          </Link>
-        </div>
-      </section>
+
+      <Education /> {/* Coloca el componente Education aquí */}
+
+      <About /> {/* Coloca el componente About después del componente Education */}
     </>
   );
 };

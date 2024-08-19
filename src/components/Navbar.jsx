@@ -28,10 +28,10 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/about"
+            to="/skills"
             className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
           >
-            About
+            Skills
           </Link>
           <Link
             to="/projects"
@@ -40,22 +40,22 @@ const Navbar = () => {
             Projects
           </Link>
           <Link
-            to="/skills"
+            to="/education"
             className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
           >
-            Skills
+            Education
+          </Link>
+          <Link
+            to="/about"
+            className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+          >
+            About
           </Link>
           <Link
             to="/contact"
             className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
           >
             Contact
-          </Link>
-          <Link
-            to="/education"
-            className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
-          >
-            Education
           </Link>
         </div>
       </div>
