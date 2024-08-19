@@ -4,22 +4,34 @@ import ProjectItem from './ProjectItem';
 const ProjectList = () => {
   const projects = [
     {
-      title: 'Proyecto 1',
-      description: 'Descripción breve del Proyecto 1.',
-      liveLink: 'https://live-link-proyecto1.com',
-      repoLink: 'https://github.com/usuario/proyecto1',
+      title: 'Weather app',
+      description: 'A web application that shows different weather facts in your nearest position or in any place that can be found by search..',
+      liveLink: 'https://proyec-final.vercel.app/',
+      repoLink: 'https://github.com/JoelPercca3/ProyecFinal.git',
     },
     {
-      title: 'Proyecto 2',
-      description: 'Descripción breve del Proyecto 2.',
-      liveLink: 'https://live-link-proyecto2.com',
-      repoLink: 'https://github.com/usuario/proyecto2',
+      title: 'Ecommerce app',
+      description: 'This simple eCommerce is an online platform designed to offer an intuitive and efficient shopping experience. The app allows users to browse products, make purchases and manage their orders in a simple way. This project stands out for its focus on essential functionality and ease of use.',
+      liveLink: 'https://practica-calificada10.vercel.app/#',
+      repoLink: 'https://github.com/JoelPercca3/PracticaCalificada10.git',
     },
     {
-        title: 'Proyecto 3',
-        description: 'Descripción breve del Proyecto 1.',
-        liveLink: 'https://live-link-proyecto1.com',
-        repoLink: 'https://github.com/usuario/proyecto1',
+        title: 'Winbnb app',
+        description: 'A web application inspired by Airbnb to look for different flats by location and guests.',
+        liveLink: 'https://min-proyect.vercel.app/',
+        repoLink: 'https://github.com/JoelPercca3/minProyect.git',
+      },
+      {
+        title: 'Space app',
+        description: 'A web application inspired by Airbnb to look for different flats by location and guests.',
+        liveLink: 'https://practica-calificada3.vercel.app/',
+        repoLink: 'https://github.com/JoelPercca3/PracticaCalificada3.git',
+      },
+      {
+        title: 'Authentication app',
+        description: 'A web application that allows you to register as a new user and allows us to view the profile with your data and edit it.',
+        liveLink: 'https://practica-calificada3.vercel.app/',
+        repoLink: 'https://github.com/JoelPercca3/PracticaCalificada3.git',
       },
     // Añade más proyectos aquí
   ];
