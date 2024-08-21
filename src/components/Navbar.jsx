@@ -1,21 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FiMenu, FiX } from 'react-icons/fi'; // Importamos los iconos de react-icons
+import { FiMenu, FiX } from 'react-icons/fi';
+import { GoRocket } from 'react-icons/go';
+import { CiLight } from 'react-icons/ci'; // Importamos el icono CiLight
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
+  // Cargar el tema del almacenamiento local al iniciar
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+      document.body.classList.toggle('dark', savedTheme === 'dark');
+    }
+  }, []);
+
+  // Alternar entre modo claro y oscuro
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode ? 'dark' : 'light';
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem('theme', newTheme);
+    document.body.classList.toggle('dark', !isDarkMode);
+  };
+
+  // Alternar el menú de navegación
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="bg-gray-800 p-4 text-white">
+    <nav className={`bg-gray-800 p-4 text-white ${isDarkMode ? 'bg-gray-900' : 'bg-gray-800'}`}>
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">
+        <Link to="/" className="flex items-center text-2xl font-bold">
+          <GoRocket size={32} className="mr-2" />
           My Portfolio
         </Link>
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center space-x-4">
+          <button onClick={toggleTheme} className="focus:outline-none">
+            <CiLight size={24} />
+          </button>
           <button onClick={toggleMenu} className="focus:outline-none">
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>

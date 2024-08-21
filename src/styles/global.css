@@ -3,4 +3,11 @@ body {
     background-color: #f7fafc;
     color: #2d3748;
   }
-  
+  /* En tu archivo global de CSS o Tailwind CSS */
+body {
+  @apply bg-white text-black;
+}
+
+body.dark {
+  @apply bg-gray-900 text-white;
+}
