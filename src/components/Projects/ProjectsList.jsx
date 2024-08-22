@@ -6,7 +6,7 @@ const ProjectList = () => {
   const projects = [
     {
       title: 'Weather app',
-      description: 'A web application that shows different weather facts in your nearest position or in any place that can be found by search.',
+      description: 'A web application that shows different weather facts in your nearest position or in any place that can be found by search..',
       liveLink: 'https://proyec-final.vercel.app/',
       repoLink: 'https://github.com/JoelPercca3/ProyecFinal.git',
       image: '/src/assets/images/weather.JPG'
@@ -53,8 +53,8 @@ const ProjectList = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">Mis Proyectos</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+      <h1 className="text-4xl font-bold mb-8 text-center">Mis Proyectos</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <ProjectItem
             key={index}

@@ -3,7 +3,7 @@ import perfilImage from '../assets/images/perfil3.png';
 
 const Hero = () => {
   return (
-    <section className="bg-gray-900 text-white h-screen flex items-center justify-center">
+    <section className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 text-white h-screen flex items-center justify-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between">
         {/* Contenido de texto a la izquierda */}
         <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/3 p-6 md:p-8">
@@ -34,4 +34,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
