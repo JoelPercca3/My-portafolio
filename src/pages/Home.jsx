@@ -2,22 +2,46 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import ProjectsList from '../components/Projects/ProjectsList';
-import About from './About'; // Agrega esta línea para importar el componente About
-import Education from './Education'; // Agrega esta línea para importar el componente Education
-import { Link } from 'react-router-dom';
+import About from './About';
+import Education from './Education';
+import { IoLogoJavascript } from "react-icons/io";
+import { FaHtml5, FaCss3, FaBootstrap, FaReact, FaNode, FaGitAlt, FaGithub } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { DiResponsive } from "react-icons/di";
+import { SiExpress, SiMongodb, SiMysql } from "react-icons/si";
 
 const skills = [
   { 
     name: 'Frontend Development', 
-    description: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'React.js', 'Tailwind CSS', 'React Router 6', 'Responsive Design']
+    description: [
+      { text: 'HTML', icon: FaHtml5, color: 'text-orange-600' }, 
+      { text: 'CSS', icon: FaCss3, color: 'text-blue-600' },
+      { text: 'JavaScript', icon: IoLogoJavascript, color: 'text-yellow-500' },
+      { text: 'Bootstrap', icon: FaBootstrap, color: 'text-purple-600' },
+      { text: 'React.js', icon: FaReact, color: 'text-cyan-600' },
+      { text: 'Tailwind CSS', icon: RiTailwindCssFill, color: 'text-teal-500' },
+      { text: 'React Router 6', icon: FaReact, color: 'text-cyan-600' },
+      { text: 'Responsive Design', icon: DiResponsive, color: 'text-green-500' }
+    ]
   },
   { 
     name: 'Backend Development', 
-    description: ['Node.js', 'Express.js', 'MongoDB', 'MySQL', 'RESTful APIs']
+    description: [
+      { text: 'Node.js', icon: FaNode, color: 'text-green-700' },
+      { text: 'Express.js', icon: SiExpress, color: 'text-gray-700' },
+      { text: 'MongoDB', icon: SiMongodb, color: 'text-green-600' },
+      { text: 'MySQL', icon: SiMysql, color: 'text-blue-700' },
+      { text: 'RESTful APIs', icon: FaNode, color: 'text-green-700' }
+    ]
   },
   { 
     name: 'Other Skills', 
-    description: ['Git', 'GitHub', 'Intermediate-Advanced English', 'Native Spanish language']
+    description: [
+      { text: 'Git', icon: FaGitAlt, color: 'text-orange-600' },
+      { text: 'GitHub', icon: FaGithub, color: 'text-gray-800' },
+      { text: 'Intermediate-Advanced English', icon: FaReact, color: 'text-blue-500' }, // Puedes cambiar el ícono y color
+      { text: 'Native Spanish language', icon: FaReact, color: 'text-red-500' } // Puedes cambiar el ícono y color
+    ]
   },
 ];
 
@@ -38,9 +62,12 @@ const Home = () => {
                 <h3 className="text-2xl font-bold text-gray-700 mb-4">
                   {skill.name}
                 </h3>
-                <ul className="text-gray-600 list-disc list-inside space-y-1">
+                <ul className="text-gray-600 list-none space-y-2">
                   {skill.description.map((item, i) => (
-                    <li key={i}>{item}</li>
+                    <li key={i} className="flex items-center space-x-2">
+                      <item.icon className={`text-xl ${item.color}`} />
+                      <span>{item.text}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
