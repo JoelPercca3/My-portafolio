@@ -2,13 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { GoRocket } from 'react-icons/go';
-import { CiLight } from 'react-icons/ci'; // Importamos el icono CiLight
+import { CiLight } from 'react-icons/ci';
+import { FaHome, FaTools } from "react-icons/fa";
+import { BiSolidWrench } from "react-icons/bi";
+import { IoMdSchool } from "react-icons/io";
+import { IoPersonSharp } from "react-icons/io5";
+import { BsTelephonePlus } from "react-icons/bs";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Cargar el tema del almacenamiento local al iniciar
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
@@ -17,7 +21,6 @@ const Navbar = () => {
     }
   }, []);
 
-  // Alternar entre modo claro y oscuro
   const toggleTheme = () => {
     const newTheme = !isDarkMode ? 'dark' : 'light';
     setIsDarkMode(!isDarkMode);
@@ -25,7 +28,6 @@ const Navbar = () => {
     document.body.classList.toggle('dark', !isDarkMode);
   };
 
-  // Alternar el menú de navegación
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -49,44 +51,50 @@ const Navbar = () => {
           <div className="md:hidden flex flex-col space-y-4 p-4">
             <Link
               to="/"
-              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300 flex items-center"
               onClick={() => setIsOpen(false)}
             >
+              <FaHome size={20} className="mr-2" />
               Home
             </Link>
             <Link
               to="/skills"
-              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300 flex items-center"
               onClick={() => setIsOpen(false)}
             >
+              <FaTools size={20} className="mr-2" />
               Skills
             </Link>
             <Link
               to="/projects"
-              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300 flex items-center"
               onClick={() => setIsOpen(false)}
             >
+              <BiSolidWrench size={20} className="mr-2" />
               Projects
             </Link>
             <Link
               to="/education"
-              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300 flex items-center"
               onClick={() => setIsOpen(false)}
             >
+              <IoMdSchool size={20} className="mr-2" />
               Education
             </Link>
             <Link
               to="/about"
-              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300 flex items-center"
               onClick={() => setIsOpen(false)}
             >
+              <IoPersonSharp size={20} className="mr-2" />
               About
             </Link>
             <Link
               to="/contact"
-              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300"
+              className="block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition duration-300 flex items-center"
               onClick={() => setIsOpen(false)}
             >
+              <BsTelephonePlus size={20} className="mr-2" />
               Contact
             </Link>
           </div>

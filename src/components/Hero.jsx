@@ -8,7 +8,9 @@ const Hero = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between">
         {/* Contenido de texto a la izquierda */}
         <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/3 p-6 md:p-8">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6">Hi, I am Joel Percca</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-cyan-300">
+            Hi, I am Joel Percca
+          </h1>
           <div className="text-3xl md:text-4xl font-bold mb-4">
             <Typewriter
               words={['Welcome to my Portfolio']}
@@ -20,12 +22,26 @@ const Hero = () => {
               delaySpeed={1000}
             />
           </div>
-          <p className="text-lg md:text-xl mb-8 max-w-lg">
+          <p className="text-lg md:text-xl mb-8 max-w-lg text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-400 font-semibold shadow-lg">
             I am a dedicated Full Stack Developer. Passionate about creating exceptional user experiences.
           </p>
-          <a href="projects" className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full shadow-lg transition-all duration-300">
-            See My Projects
-          </a>
+          <div className="flex space-x-4">
+            <a 
+              href="projects" 
+              className="relative inline-block px-6 py-3 font-bold text-white bg-blue-500 rounded-full shadow-lg transition-transform transform-gpu hover:scale-105 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            >
+              <span className="absolute inset-0 w-full h-full transition-transform duration-200 ease-out transform translate-x-1 translate-y-1 bg-blue-700 rounded-full shadow-lg"></span>
+              <span className="relative">See My Projects</span>
+            </a>
+            <a 
+              href="/Curriculum Joel Percca.pdf" 
+              download 
+              className="relative inline-block px-6 py-3 font-bold text-white bg-green-500 rounded-full shadow-lg transition-transform transform-gpu hover:scale-105 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300"
+            >
+              <span className="absolute inset-0 w-full h-full transition-transform duration-200 ease-out transform translate-x-1 translate-y-1 bg-green-700 rounded-full shadow-lg"></span>
+              <span className="relative">Download My CV</span>
+            </a>
+          </div>
         </div>
 
         {/* Imagen a la derecha, más grande */}
