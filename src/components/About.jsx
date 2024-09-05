@@ -16,6 +16,13 @@ const About = () => {
         <p className="leading-relaxed text-lg md:text-xl">
           As a web developer, I am motivated by the opportunity to bring cutting-edge technologies to life, ensuring that they are accessible and functional for all users. I look forward to contributing my skills and enthusiasm to a forward-thinking team, where I can continue to grow and make a significant impact.
         </p>
+        <div className="flex justify-center mt-8">
+          <img 
+            src="/assets/images/perfil4.png" 
+            alt="Perfil"
+            className="w-32 h-32 rounded-full shadow-lg"
+          />
+        </div>
       </div>
     </section>
   );

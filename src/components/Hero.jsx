@@ -1,6 +1,5 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
-import perfilImage from '../assets/images/perfil3.png';
 
 const Hero = () => {
   return (
@@ -47,7 +46,7 @@ const Hero = () => {
         {/* Imagen a la derecha, más grande */}
         <div className="md:w-2/3 flex justify-center md:justify-end">
           <img 
-            src={perfilImage} 
+            src="/assets/images/perfil4.png" 
             alt="Perfil" 
             className="w-80 h-80 md:w-96 md:h-96 lg:w-112 lg:h-112 rounded-full mb-6 md:mb-0" 
             style={{

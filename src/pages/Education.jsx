@@ -1,8 +1,4 @@
-// src/pages/Education.jsx
 import React from 'react';
-import ChurchImage from '../assets/images/Church.JPG'; // Ajusta la ruta si es necesario
-import FundetImage from '../assets/images/Fundet.jpeg'; // Ajusta la ruta si es necesario
-import PathwayImage from '../assets/images/Pathway.JPG'; // Ajusta la ruta si es necesario
 
 const Education = () => {
   return (
@@ -13,7 +9,7 @@ const Education = () => {
           {/* Church Education */}
           <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
             <img
-              src={ChurchImage}
+              src="/assets/images/Church.JPG"
               alt="Church"
               className="w-full h-auto rounded-lg mb-4"
             />
@@ -25,7 +21,7 @@ const Education = () => {
           {/* Fundet Education */}
           <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
             <img
-              src={FundetImage}
+              src="/assets/images/Fundet.jpeg"
               alt="Fundet"
               className="w-full h-auto rounded-lg mb-4"
             />
@@ -38,7 +34,7 @@ const Education = () => {
           {/* Pathway Education */}
           <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
             <img
-              src={PathwayImage}
+              src="/assets/images/Pathway.JPG"
               alt="Pathway"
               className="w-full h-auto rounded-lg mb-4"
             />
