@@ -26,7 +26,9 @@ const skills = [
       { text: 'Express.js', icon: SiExpress, color: 'text-gray-700' },
       { text: 'MongoDB', icon: SiMongodb, color: 'text-green-600' },
       { text: 'MySQL', icon: SiMysql, color: 'text-blue-700' },
-      { text: 'RESTful APIs', icon: FaNode, color: 'text-green-700' }
+      { text: 'RESTful APIs', icon: FaNode, color: 'text-green-700' },
+      { text: 'PostgreSQL', icon: FaNode, color: 'text-green-700' },
+      
     ]
   },
   { 
